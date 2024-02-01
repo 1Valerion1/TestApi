@@ -1,0 +1,249 @@
+SQL БД школьного расписания некого учебного заведения: https://sql-academy.org/ru/sandbox
+Выполняем проверки:
+Так как у нас проверка, то мы делаем обратные действия к запросу.
+1.	У каждого ученика должны быть указаны, фамилия, имя,  день рождения и адрес проживания.
+
+SELECT first_name, last_name, birthday, address
+FROM student
+WHERE first_name IS NULL OR
+last_name IS NULL OR
+birthday IS NULL OR
+address IS NULL;
+
+2.	Подразумевается, что все ученики проживают в одном городе, в адресе указываются только улица, номер дома и номер квартиры
+
+Проверяем что адрес не соответствует шаблону
+
+SELECT *
+FROM Student
+WHERE address NOT LIKE '%,%,%' ;
+
+3.	Каждый ученик должен быть прикреплен к классу
+Проверяем учеников, которые не прикреплены ни к одному классу. Выдает 1-го
+
+SELECT *
+FROM Student LEFT JOIN
+Student_in_class ON Student.id = Student_in_class.student
+WHERE Student_in_class.class IS NULL;
+
+4.	У каждого преподавателя должны быть указаны Фамилия и имя
+
+SELECT first_name,last_name
+FROM Teacher
+WHERE first_name IS NULL OR last_name IS NULL;
+
+5.	У каждого класса должно указываться буквенное распределение(их три A B C)
+В учебном заведении стандартная форма обучения 11 классов
+
+SELECT *
+FROM Class
+WHERE name NOT LIKE '%A%'
+AND name NOT LIKE '%B%'
+AND name NOT LIKE '%C%';
+
+Второй вариант:
+
+SELECT *
+FROM Class
+WHERE name NOT REGEXP 'A|B|C';
+
+6.	В каждом классе, должно быть хотябы 10 учеников
+Смотрим в каких классах меньше 10 учеников.
+
+SELECT Class.name, COUNT(Student_in_class.student) AS student_count
+FROM Class
+LEFT JOIN Student_in_class ON Class.id = Student_in_class.class
+GROUP BY Class.name
+HAVING student_count < 10;
+
+7.	В учебном заведении есть всего несколько классных комнат(11,12,13,15,17,21,23,29,35,44,45)
+Выбираем уникальные классные комнаты и выбирает из списка
+Выдает 2: 13 и 35
+
+SELECT DISTINCT classroom
+FROM Schedule
+WHERE classroom IN (11, 12, 13, 15, 17, 21, 23, 29, 35, 44, 45);
+
+8.	Имя преподавателя указывается только в английской раскладке(Ivan)
+
+SELECT *
+FROM Teacher
+WHERE
+  first_name  REGEXP '[А-Яа-я]' ;
+
+9.	Отчество преподавателя указывается только в английской раскладке(Petrovich)
+
+SELECT *
+FROM Teacher
+WHERE
+  middle_name REGEXP '[А-Яа-я]';
+
+10.	Фамилия преподавателя указывается только в английской раскладке(Sidorov)
+
+SELECT *
+FROM Teacher
+WHERE
+ last_name REGEXP '[А-Яа-я]';
+
+11.	Название предмета указывается только в английской раскладке(Biology)
+SELECT *
+FROM Subject
+WHERE name REGEXP '[А-Ая-я]'
+
+12.	Время в формате Time(HH:MM), дата старта раньше чем дата окончания
+Все ок
+
+SELECT *
+FROM Timepair
+WHERE start_pair > end_pair;
+
+13.	Время в формате Time(HH:MM), дата окончания позже чем дата старта
+Все ок
+
+SELECT *
+FROM Timepair
+WHERE end_pair < start_pair;
+
+14.	Номер класса указывается только в английской раскладке(1 A, 2 B, 3 C)
+Проверяем на кириллицу
+
+SELECT *
+FROM Class
+WHERE
+  name LIKE '_ А' OR name LIKE '_ В' OR name LIKE '_ С';
+
+15.	Имя ученика указывается только в английской раскладке(Ivan)
+Все ок
+
+SELECT *
+FROM Student
+WHERE
+  first_name  REGEXP '[А-Яа-я]'
+
+16.	Отчество ученика указывается только в английской раскладке(Petrovich)
+Все ок
+
+SELECT *
+FROM Student
+WHERE
+  middle_name  REGEXP '[А-Яа-я]'
+
+17.	Фамилия ученика указывается только в английской раскладке(Sidorov)
+Все ок
+
+SELECT *
+FROM Student
+WHERE
+  last_name  REGEXP '[А-Яа-я]'
+
+18.	Дата рождения в формате Date(YYYY-MM-DD)
+
+SELECT *
+FROM Student
+WHERE birthday NOT LIKE '____-__-__';
+
+19.	Адрес проживания указывается только в английской раскладке(ul. Litkina, d. 18, k. 838)
+Проверяем на кириллицу
+
+SELECT *
+FROM Student
+WHERE address REGEXP '[А-Яа-я]'
+
+20.	Дата в формате Date (YYYY-MM-DD)
+
+SELECT *
+FROM Schedule
+WHERE date NOT LIKE '____-__-__';
+
+21.	Номер кабинета в формате int (25, 29, 13)
+SELECT *
+FROM Schedule
+WHERE classroom NOT REGEXP '[0-9]';
+Реализовать запросы
+
+•	Выведите полные имена (ФИО) всех студентов и преподавателей
+SELECT first_name,last_name,middle_name
+FROM Student
+WHERE (
+first_name IS NOT NULL AND
+last_name IS NOT NULL AND
+middle_name IS NOT NULL
+)
+UNION
+SELECT first_name,last_name,middle_name
+FROM Teacher
+WHERE (
+first_name IS NOT NULL AND
+last_name IS NOT NULL AND
+middle_name IS NOT NULL
+)
+
+•	Вывести количество лет самомому молодому студенту
+
+SELECT TIMESTAMPDIFF(
+YEAR,
+(SELECT MAX(birthday) FROM Student),
+CURDATE()
+) AS student_min_age_years;
+
+student_min_age_years
+16
+
+•	Кто из студентов живет на улице Ленина
+Никто
+
+SELECT *
+FROM Student
+WHERE address LIKE 'ul. Lenina,%,%'
+
+Я поменял на карла макса
+SELECT *
+FROM Student
+WHERE address LIKE 'ul. Karla Marksa,%,%'
+
+
+
+•	Вывести название предметов, которые преподает учитель по фамилии Иванов
+
+Такого преподавателя нет, соответственно и нет предметов
+SELECT  DISTINCT Subject.name
+FROM Schedule
+LEFT JOIN Teacher ON Teacher.id= Schedule.teacher
+LEFT JOIN Subject ON Subject.id= Schedule.subject
+
+WHERE Teacher.last_name = 'Ivanov'
+
+Поэтому проверим, через другую фамилию
+
+SELECT  DISTINCT Subject.name
+FROM Schedule
+LEFT JOIN Teacher ON Teacher.id= Schedule.teacher
+LEFT JOIN Subject ON Subject.id= Schedule.subject
+
+WHERE Teacher.last_name = 'Arakcheeva'
+
+
+•	Вывести количество 5х классов
+
+SELECT COUNT(DISTINCT name) AS  class_count
+FROM Class
+WHERE name LIKE '5 _'
+
+class_count
+2
+•	Вывести расписание на заданную дату
+
+SELECT *
+FROM Schedule
+WHERE date LIKE '2019-09-01'
+
+•	Вывести всех преподавателей преподающих Биологию
+1 преподаватель
+
+SELECT DISTINCT Teacher.*
+FROM Schedule
+LEFT JOIN Subject ON  Subject.id= Schedule.subject
+LEFT JOIN Teacher ON  Teacher.id= Schedule.teacher
+WHERE Subject.name = 'Biology'
+
+

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39e930d8-da29-4db4-bd91-3b871bd4ef66" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/test/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/InfoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/Specifications.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/filesController/UnlDownTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/Dlc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/Requirements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/SimilarDlc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/JwtRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/TokenTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/train/NumbersPow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/train/ResponseData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/train/TrainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/userNew/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/userNew/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ТЗ.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2bcYpaWGqsyWGRn3ZPnlMDSdAb3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/vvadi/Desktop/TestApi"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.test.api.gameNew" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.GameTest">
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestApiJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.api.gameNew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test.api.gameNew" />
+      <option name="MAIN_CLASS_NAME" value="org.test.api.gameNew.GameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.getTestAToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestApiJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.api.gameNew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test.api.gameNew" />
+      <option name="MAIN_CLASS_NAME" value="org.test.api.gameNew.GameTest" />
+      <option name="METHOD_NAME" value="getTestAToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.getTestBAllGames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestApiJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.api.gameNew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test.api.gameNew" />
+      <option name="MAIN_CLASS_NAME" value="org.test.api.gameNew.GameTest" />
+      <option name="METHOD_NAME" value="getTestBAllGames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestApiJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.api.jwtToken.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test.api.jwtToken" />
+      <option name="MAIN_CLASS_NAME" value="org.test.api.jwtToken.TokenTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.successRegTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestApiJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.api.userNew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test.api.userNew" />
+      <option name="MAIN_CLASS_NAME" value="org.test.api.userNew.UserTest" />
+      <option name="METHOD_NAME" value="successRegTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.getTestBAllGames" />
+        <item itemvalue="JUnit.TokenTest" />
+        <item itemvalue="JUnit.UserTest.successRegTest" />
+        <item itemvalue="JUnit.GameTest.getTestAToken" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39e930d8-da29-4db4-bd91-3b871bd4ef66" name="Changes" comment="" />
+      <created>1706516019923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706516019923</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
