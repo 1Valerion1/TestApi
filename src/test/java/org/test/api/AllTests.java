@@ -32,7 +32,7 @@ public class AllTests {
 
     @Test
     @Order(3)
-    public void testUserReg() {
+    public void testUserGameJwt() {
         UserTest userTest = new UserTest();
         userTest.successRegTest();
 
