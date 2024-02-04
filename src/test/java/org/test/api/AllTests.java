@@ -45,8 +45,6 @@ public class AllTests {
         gameTest.getTestDAllGamesUp();
         gameTest.getTestEDeleteGame();
 
-
-
         userTest.getPutUser();
         userTest.getGetUser();
         userTest.getDeleteUser();
