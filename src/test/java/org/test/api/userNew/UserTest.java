@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.test.api.InfoDto;
 import org.test.api.Specifications;
-import org.test.api.gameNew.GameTest;
+import org.test.api.jwtToken.Token;
 
 import java.util.UUID;
 
@@ -19,6 +19,9 @@ import static org.hamcrest.Matchers.notNullValue;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserTest {
 
+    public static String login;
+    public static String pass;
+
    private static String newPassword = "pass";
 
     @Test
@@ -28,8 +31,8 @@ public class UserTest {
 
        for (int i = 0;i < 1; i++) {
 
-            String pass = UUID.randomUUID().toString().substring(0, 9);
-            String login = "VadimMadiv " + pass;
+             pass = UUID.randomUUID().toString().substring(0, 9);
+             login = "VadimMadiv " + pass;
 
 
             UserData userData = new UserData(null, login, pass, null);
@@ -57,10 +60,10 @@ public class UserTest {
     @Order(2)
     public void getPutUser(){
         Specifications.installSpecification(Specifications.requestSpec(),Specifications.responseSpecOk200());
-
+        String token = Token.getToken();
 
         InfoDto info = given()
-                .auth().oauth2(GameTest.token)
+                .auth().oauth2(token)
                 .body("{\"password\": \"" + newPassword + "\"}")
                 .when()
                     .put("/api/user")
@@ -78,9 +81,10 @@ public class UserTest {
     //Проверка,что у пользователя измененный пароль
     public void getGetUser(){
         Specifications.installSpecification(Specifications.requestSpec(),Specifications.responseSpecOk200());
+        String token = Token.getToken();
 
         UserData userUp = given()
-                .auth().oauth2(GameTest.token)
+                .auth().oauth2(token)
                 .when()
                 .get("/api/user")
                 .then()
@@ -97,9 +101,10 @@ public class UserTest {
     //Проверка,что пользователь удален
     public void getDeleteUser(){
         Specifications.installSpecification(Specifications.requestSpec(),Specifications.responseSpecOk200());
+        String token = Token.getToken();
 
         InfoDto info = given()
-                .auth().oauth2(GameTest.token)
+                .auth().oauth2(token)
                 .when()
                 .delete("/api/user")
                 .then()
@@ -107,7 +112,7 @@ public class UserTest {
                 .extract()
                 .body().jsonPath().getObject("info", InfoDto.class);
 
-        assertThat(info.getMessage(),equalTo("success"));
+        assertThat(info.getStatus(),equalTo("success"));
         assertThat(info.getMessage(),equalTo("User successfully deleted"));
 
     }

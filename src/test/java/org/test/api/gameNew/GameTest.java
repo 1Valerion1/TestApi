@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.test.api.InfoDto;
 import org.test.api.Specifications;
-import org.test.api.jwtToken.JwtRequest;
+import org.test.api.jwtToken.Token;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -23,7 +23,7 @@ import static org.hamcrest.Matchers.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class GameTest {
 
-    public static String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWYWRpbU1hZGl2IGI2YWEyMDM5LSIsImV4cCI6MTcwNjcxNzYyNCwiaWF0IjoxNzA2Njk5NjI0fQ.Ojqh-rcgZf8HDlf9Twy3yQwO-ZAM5MZErnLTQlBrFHTuRx-UW6IDaOC__S0esSd4uHPi3215lVYL3UOerVv6gA";
+    public  String token = Token.getToken();
     private static  List<Game> allGames = new ArrayList<>(15);
     private static int addGameId = -1;
 

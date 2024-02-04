@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e930d8-da29-4db4-bd91-3b871bd4ef66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/test/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/InfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/Specifications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/filesController/UnlDownTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/Dlc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/GameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/Requirements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/SimilarDlc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/JwtRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/TokenTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/train/NumbersPow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/train/ResponseData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/train/TrainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/userNew/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/userNew/UserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ТЗ.txt" afterDir="false" />
+    <list default="true" id="39e930d8-da29-4db4-bd91-3b871bd4ef66" name="Changes" comment="# SQL запросы и тесты апи">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/AllTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/test/api/gameNew/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/TokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/TokenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/test/api/userNew/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/test/api/userNew/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$SQL.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,20 +39,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/vvadi/Desktop/TestApi"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vvadi/Desktop/TestApi&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.test.api.gameNew" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest">
+  <component name="RunManager" selected="JUnit.AllTests">
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestApi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test.api" />
+      <option name="MAIN_CLASS_NAME" value="org.test.api.AllTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestApiJava" />
       <extension name="coverage">
@@ -83,22 +79,6 @@
       <option name="PACKAGE_NAME" value="org.test.api.gameNew" />
       <option name="MAIN_CLASS_NAME" value="org.test.api.gameNew.GameTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.getTestAToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TestApiJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.test.api.gameNew.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.test.api.gameNew" />
-      <option name="MAIN_CLASS_NAME" value="org.test.api.gameNew.GameTest" />
-      <option name="METHOD_NAME" value="getTestAToken" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AllTests" />
         <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.GameTest.getTestBAllGames" />
         <item itemvalue="JUnit.TokenTest" />
         <item itemvalue="JUnit.UserTest.successRegTest" />
-        <item itemvalue="JUnit.GameTest.getTestAToken" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +149,14 @@
       <option name="presentableId" value="Default" />
       <updated>1706516019923</updated>
     </task>
+    <task id="LOCAL-00001" summary="# SQL запросы и тесты апи">
+      <created>1706801740911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706801740911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,5 +169,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# SQL запросы и тесты апи" />
+    <option name="LAST_COMMIT_MESSAGE" value="# SQL запросы и тесты апи" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/test/api/jwtToken/TokenTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
